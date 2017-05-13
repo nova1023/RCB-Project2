@@ -1,0 +1,40 @@
+body {
+	background-color: #e0e0e0;
+}
+
+.full-width-img{
+	width: 100%;
+}
+
+.stand-out-div-light{
+	background-color: #f1f1f1;
+}
+
+.stand-out-div-dark{
+	background-color: #d4d4d4;
+}
+
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+.hidden-div {
+	visibility: hidden;
+}
+
+.rounded-borders {
+	border-radius: 10px;
+}
+
+.hover-shadow{
+	box-shadow: 0 0 10px #0f0f0f;
+}
+
+.selected-shadow{
+	box-shadow: 0 0 10px blue;
+}

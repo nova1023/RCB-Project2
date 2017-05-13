@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-en">
+<head>
+	<title id="title">Battle Bay</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- JQuery css -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	<!-- jQuery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous">
+	</script>
+	
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!--  NAV  -->
+	<nav class="navbar navbar-default" id="main-nav-bar">
+	  <div class="container-fluid">
+	  	<div class="row">
+				<div class="col-xs-12">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <!--  <a class="navbar-brand" href="#">Brand</a>  -->
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="">
+			          <a href="/">Form-test <span class="sr-only">(current)</span></a>
+			        </li>
+			        <li>
+			        	<a href="/landing">Home</a>
+			        </li>
+			        <li>
+			        	<a href="/sign-in">Sign In</a>
+			        </li>
+			        <li>
+			          <a href="/user-homepage" id="user-homepage-link">User Homepage</a>
+			        </li>
+			        <li>
+			        	<a href="/make-a-listing">Make a Listing</a>
+			        </li>
+			        <li>
+			          <a href="/all-listings">All Listings</a>
+			        </li>
+			        <li>
+			          <a href="/warehouse">Warehouse</a>
+			        </li>
+			        <li>
+			          <a href="/leaderboard">Leaderboard</a>
+			        </li>
+			      </ul>
+	<!--  		<form class="navbar-form navbar-left">
+			        <div class="form-group">
+			          <input type="text" class="form-control" placeholder="Search">
+			        </div>
+			        <button type="submit" class="btn btn-default">Submit</button>
+			      </form>  -->
+			      <!--  <ul class="nav navbar-nav navbar-right">
+			        <li>
+			          <a href="#">Link</a>
+			        </li>
+			      </ul>  -->
+			    </div><!-- /.navbar-collapse -->
+			  </div> <!--  col-xs-12  -->
+			</div> <!--  row  -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+<!--  End of Nav  -->
+
+
+<!--  Main Barba Wrappers  -->
+	<main id="barba-wrapper">
+  	<div class="barba-container">
+    
+			<div class="row">
+	<div class="col-xs-10 col-xs-offset-1">
+		<h1>Sign in/up Page Forms</h1>
+		
+		<br>
+		
+			<h3>Sign up</h3>
+			<form>
+			<input type="text" name="signUpName">name
+			<br>
+			<input type="password" name="signUpPassword">Pass
+			<br>
+			<input type="password" name="signUpPasswordConfirm">Confirm Pass
+			</form>
+			<button id="signUpSubmit" type="submit">Sign Up Submit</button>
+			
+		
+		<br>
+		
+			<h3>Sign In</h3>
+			<form>
+			<input type="text" name="signInName">Name
+			<br>
+			<input type="password" name="signInPassword">Pass
+			</form>
+			<button id="signInSubmit" >Sign In Submit</button>
+			
+		
+		<br>
+		<br>
+		<br>
+		<hr>
+		
+		<h1>User Homepage Forms</h1>
+		
+		<br>
+		
+			<h3>API Calls</h3>
+			<div id="playerAccountInfo">
+				<h4>Player Account Info Goes Here</h4>
+				<ul>
+					<li>Money</li>
+					<li>Inventory</li>
+					<li>Number of items for sale</li>
+				</ul>
+			</div>
+			<button id="getPlayerAccountInfo">Get Player Account Info</button>
+		
+		<br>
+		
+			<div id="playerListings">
+				<h4>Player item listings go here</h4>
+				<ul>
+					<li>Item one:--NAME--NUMBER OF BIDS--STOCK--CURRENT PRICE--</li>
+					<li>Item two:--NAME--NUMBER OF BIDS--STOCK--CURRENT PRICE--</li>
+					<li>Item three:--NAME--NUMBER OF BIDS--STOCK--CURRENT PRICE--</li>
+					<li>Item four:--NAME--NUMBER OF BIDS--STOCK--CURRENT PRICE--</li>
+					<li>Item five:--NAME--NUMBER OF BIDS--STOCK--CURRENT PRICE--</li>
+					<li>Item six:--NAME--NUMBER OF BIDS--STOCK--CURRENT PRICE--</li>
+				</ul>	
+			</div>
+			<button id="getPlayerListings">Get Player Listings</button>
+		
+		<br>
+		
+			<div id="playersItemsSold">
+				<h4>Players sold items go here</h4>
+				<ul>
+					<li>Item one:--NAME--NUMBER OF BIDS--SOLD FOR--</li>
+					<li>Item two:--NAME--NUMBER OF BIDS--SOLD FOR--</li>
+					<li>Item three:--NAME--NUMBER OF BIDS--SOLD FOR--</li>
+					<li>Item four:--NAME--NUMBER OF BIDS--SOLD FOR--</li>
+				</ul>
+			</div>
+			<button id="getPlayersItemsSold">Get Players Items Sold</button>
+		
+		<br>
+		<br>
+		<br>
+		<hr>
+		
+		<h1>Warehouse Page Forms</h1>
+		
+		<br>
+		
+			<h3>API Calls</h3>
+			<div id="warehousePrices">
+				<h4>Warehouse prices go here</h4>
+				<ul>
+					<li>Warehouse 1: Current Price Per Unit</li>
+					<li>Warehouse 2: Current Price Per Unit</li>
+					<li>Warehouse 3: Current Price Per Unit</li>
+				</ul>
+			</div>
+			<button id="getWarehousePrices">Get Warehouse Prices</button>
+		
+		<br>
+		
+			<div id="playerAccountInfo">
+				<h4>Player Account Info Goes Here</h4>
+				<ul>
+					<li>Money</li>
+					<li>Inventory</li>
+					<li>Number of items for sale</li>
+				</ul>
+			</div>
+			<button id="getPlayerAccountInfo">Get Player Account Info</button>
+		
+		<br>
+		
+			<h3>Buying Form</h3>
+			<form action="">
+				<input type="radio" name="warehouse" value="fashion"> Fashion
+				<br>
+				<input type="radio" name="warehouse" value="electronics"> Electronics
+				<br>
+				<input type="radio" name="warehouse" value="collectables"> Collectables
+				<br>
+				<input type="number" name="amount">number of units
+			</form>
+			<button id="placeOrder">Place Order</button>
+		
+		<br>
+		<br>
+		<br>
+		<hr>
+
+		<h1>Item Listings Page</h1>
+
+		<br>
+
+			<h3>API Calls</h3>
+			<div id="allItemListings">
+				<h4>Item Listings Go Here</h4>
+				<ul>
+					<li>Item one:--NAME--NUMBER OF BIDS--PRICE--</li>
+					<li>Item two:--NAME--NUMBER OF BIDS--PRICE--</li>
+					<li>Item three:--NAME--NUMBER OF BIDS--PRICE--</li>
+					<li>Item four:--NAME--NUMBER OF BIDS--PRICE--</li>
+				</ul>				
+			</div>
+			<h5>Sorting Options</h5>
+			<form>
+				<input type="radio" name="priceSort" value="DESC">Price DESC
+				<br>
+				<input type="radio" name="priceSort" value="ASC">Price ASC
+				<br>
+				<input type="radio" name="timeSort" value="DESC">Time DESC
+				<br>
+				<input type="radio" name="timeSort" value="ASC">Time ASC
+				<br>
+				<input type="radio" name="methodSort" value="auction">Auction
+				<br>
+				<input type="radio" name="methodSort" value="buyNow">Buy Now
+				<br>
+				<input type="radio" name="methodSort" value="all">All
+			</form>
+			<button id="getItemListings">Get Item Listings</button>
+		
+		<br>
+		<br>
+		<br>
+		<hr>
+
+		<h1>Create A Listing</h1>
+
+		<br>
+		
+			<h3>API Calls</h3>
+			<div id="playerAccountInfo">
+				<h4>Player Account Info Goes Here</h4>
+				<ul>
+					<li>Money</li>
+					<li>Inventory</li>
+					<li>Number of items for sale</li>
+				</ul>
+			</div>
+			<button id="getPlayerAccountInfo">Get Player Account Info</button>
+		
+		<br>
+			
+			<h3>Sell an Item Form</h3>
+			<form action="">
+				<input type="radio" name="itemType" value="fashion"> Fashion
+				<br>
+				<input type="radio" name="itemType" value="electronics"> Electronics
+				<br>
+				<input type="radio" name="itemType" value="collectables"> Collectables
+				<br>
+				<input type="number" name="amount">number of units
+				<br>
+				<input type="radio" name="method" value="buyNow">Buy Now
+				<br>
+				<input type="radio" name="method" value="auction">Auction
+				<br>
+				<input type="number" name="price">Price
+				<br>
+				<input type="radio" name="time" value="15">15 Min
+				<br>
+				<input type="radio" name="time" value="30">30 Min
+				<br>
+				<input type="radio" name="time" value="60">60 Min
+			</form>
+			<button id="makeListing">Make A Listing</button>
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+
+	 	</div>
+	</main>
+<!--  End of Main and Barba Wrappers  -->
+
+<!--  Footer  -->
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted" id="footer-text">Place sticky footer content here.</p>
+  </div>
+</footer>
+
+<!--  Adding Barba.js Script  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="assets/javascript/warehouse-page.js"></script>
+<script type="text/javascript" src="assets/javascript/leaderboard.js"></script>
+<script type="text/javascript" src="assets/javascript/form-test.js"></script>
+
+<script type="text/javascript" src="assets/javascript/active-class-test.js"></script>
+
+<script type="text/javascript" src="assets/javascript/barba-transitions.js"></script>
+<!--  End of page  -->
+</body>
+</html>

@@ -1,0 +1,77 @@
+Github workflow: 
+
+The general idea. While on your local master, pull down the changes from the remote master.
+
+	- Then switch over to your personal branch, and merge the changes in from the local master.
+
+Absolute beginning:
+
+- Clone the repo
+	 
+	git clone repoURLGoesHere
+
+- Enter the repo
+
+	cd repoName
+
+- To checkout what branch you’re currently on, as well as all the branches on your local machine:
+
+	git branch
+
+- Make your own branch (only have to make your own branch once)
+
+	git checkout -b yourBranchNameGoesHere(put your first name)
+
+	//The above command both creates a new branch and switches over to it
+
+- Make your changes 
+
+When you’re ready to commit and push up
+
+- Add the files you’ve changed 
+
+	git add <files>
+
+- make your commit
+	
+	git commit -m “Message describing what you’ve changed here.”
+
+- push your branch up to the remote repository
+
+	git push origin yourBranchNameHere
+
+- Create a pull request on the github website
+
+Pulling down to keep your local up to date
+
+- Switch over to your local master
+
+	git checkout master
+
+- Pull down from the remote
+
+	git pull
+
+- Your local master is now up to date with the remote master.
+
+- We now want to bring your local user branch up to date with the master
+
+- Switch over to your user branch
+
+	git checkout yourBranchNameHere
+
+- Now we want to merge the changes from the master into your branch
+
+	git merge master
+
+- Your branch is now up to date. 
+
+
+
+
+
+
+
+
+
+
